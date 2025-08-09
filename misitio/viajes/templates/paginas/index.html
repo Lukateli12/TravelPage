@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block titulo %}Bienvenidos a Nuestros Viajes{% endblock %}
+
+{% block contenido %}
+<style>
+    .card-title {
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .card-argentina .card-title {
+        background: url('https://viajes.nationalgeographic.com.es/medio/2017/01/12/age-qpx-150805115_d07a097f.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .card-uruguay .card-title {
+        background: url('https://www.costacruceros.es/content/dam/costa/costa-magazine/articles-magazine/travel/punta-del-este-travel/Porto-Nuestra-Senora-de-la-Candelaria-punta-del-este_d.jpg.image.1296.974.high.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .card-chile .card-title {
+        background: url('https://humanidades.com/wp-content/uploads/2016/09/cordillera-de-los-andes-e1560489279388.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .card-caribe-crucero .card-title {
+        background: url('https://www.solocruceros.com/blog/wp-content/uploads/2013/08/crucero-por-el-caribe.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .card-caribe-tour .card-title {
+        background: url('https://lh4.googleusercontent.com/proxy/Ze1Q_F2AcvlebOBrPmkcs6Sxeu0OArL4599xODu01TFZjfwV8J6ZVabs0gSI6Z6dRCHOil5yRH13050ngUX1CE1Rw4hh7XqwY35fupMJtZZgD4y99byQ2X3_3ABjdu_n_ubuSD1w0r45N-Y_wA38wmg72Q') no-repeat center center;
+        background-size: cover;
+    }
+
+    .card-uruguay-cultural .card-title {
+        background: url('https://www.portalesdeluruguay.com.uy/uploads/images/blog_new_35933_5934.jpg') no-repeat center center;
+        background-size: cover;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="card" style="background-color: hsla(0, 0%, 100%, 0.714); box-shadow: 0 4px 8px rgba(75, 0, 0, 0.432);">
+        <div class="card-body">
+            <h4 class="card-title" style="color: #af1414; font-family: 'Arial', sans-serif; font-weight: bold;">Viajes Disponibles</h4>
+            <div class="row">
+                <!-- Viaje a Argentina -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-argentina" style="border: 2px solid #ac2200; border-radius: 10px; background-color: #ffffff; box-shadow: 0 4px 8px rgb(75, 0, 0, 0.432);">
+                        <div class="card-body">
+                            <h5 class="card-title">Aventura en Argentina</h5>
+                            <p class="card-text">Descubre la vibrante cultura de Buenos Aires y maravíllate con la belleza de la Patagonia en un emocionante viaje a Argentina.</p>
+                            <h4>Por tan solo 200USD</h4>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-info" style="background: #a70202; color: #ffffff;" href="{% url 'formulario' %}" role="button">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Viaje a Uruguay -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-uruguay" style="border: 2px solid #ac2200; border-radius: 10px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(75, 0, 0, 0.432);">
+                        <div class="card-body">
+                            <h5 class="card-title">Exploración en Uruguay</h5>
+                            <p class="card-text">Relájate en las playas de Punta del Este y descubre el encanto colonial de Montevideo en un viaje inolvidable a Uruguay.</p>
+                            <h4>Por tan solo 300USD</h4>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-info" style="background: #a70202; color: #ffffff;" href="{% url 'formulario' %}" role="button">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Viaje a Chile -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-chile" style="border: 2px solid #ac2200; border-radius: 10px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(75, 0, 0, 0.432);">
+                        <div class="card-body">
+                            <h5 class="card-title">Aventura en Chile</h5>
+                            <p class="card-text">Explora los paisajes impresionantes de los Andes y sumérgete en la vibrante cultura de Santiago en este viaje a Chile.</p>
+                            <h4>Por tan solo 400USD</h4>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-info" style="background: #a70202; color: #ffffff;" href="{% url 'formulario' %}" role="button">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Crucero por el Caribe -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-caribe-crucero" style="border: 2px solid #ac2200; border-radius: 10px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(75, 0, 0, 0.432);">
+                        <div class="card-body">
+                            <h5 class="card-title">Crucero por el Caribe</h5>
+                            <p class="card-text">Relájate y disfruta del sol mientras navegas por las aguas cristalinas del Caribe en este lujoso crucero.</p>
+                            <h4>Por tan solo 600USD</h4>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-info" style="background: #a70202; color: #ffffff;" href="{% url 'formulario' %}" role="button">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour por el Caribe -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-caribe-tour" style="border: 2px solid #ac2200; border-radius: 10px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(75, 0, 0, 0.432);">
+                        <div class="card-body">
+                            <h5 class="card-title">Tour por el Caribe</h5>
+                            <p class="card-text">Explora diversas islas del Caribe, disfrutando de playas paradisíacas y la vibrante cultura caribeña.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-info" style="background: #a70202; color: #ffffff;" href="{% url 'formulario' %}" role="button">Reservar</a>
+                            <h4>Por tan solo 250USD</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Viaje cultural a Uruguay -->
+                <div class="col-md-4 mb-4">
+                    <div class="card card-uruguay-cultural" style="border: 2px solid #ac2200; border-radius: 10px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(75, 0, 0, 0.432);">
+                        <div class="card-body">
+                            <h5 class="card-title">Viaje cultural a Uruguay</h5>
+                            <p class="card-text">Sumérgete en la rica herencia cultural uruguaya, visitando ciudades históricas y degustando su exquisita gastronomía.</p>
+                            <h4>Por tan solo 90USD</h4>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-info" style="background: #a70202; color: #ffffff;" href="{% url 'formulario' %}" role="button">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

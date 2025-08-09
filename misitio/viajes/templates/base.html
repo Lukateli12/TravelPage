@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>{% block titulo %} {% endblock %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+  
+      .navbar {
+        box-shadow: 0 4px 8px rgb(255, 0, 0);
+      }
+  
+      .navbar-brand {
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        font-size: 1.5rem;
+        color: #ce0000;
+      }
+  
+      .navbar-brand:hover {
+        background-color: #e9ecef;
+      }
+  
+      .navbar-nav .nav-item {
+        margin: 0 15px;
+        transition: color 0.3s ease;
+      }
+  
+      .navbar-nav .nav-item:hover {
+        color: #ff3300;
+      }
+  
+      .container {
+        margin-top: 30px;
+      }
+  
+      .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+  
+      .card:hover {
+        transform: scale(1.02);
+      }
+  
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+  
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'inicio' %}">Viajes Increibles</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{% url 'inicio' %}">Inicio</a>
+            <a class="nav-item nav-link active" href="{% url 'Propuestas de viaje' %}">Propuestas de viaje</a>
+            <a class="nav-item nav-link active" href="{% url 'nosotros' %}">Nosotros</a>
+            <a class="nav-item nav-link active" href="{% url 'formulario' %}">Iniciar Sesión</a>
+          </div>
+          <form id="busqueda" method="get" class="d-flex ms-auto" action="/buscar">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="busca">
+            <button class="btn btn-outline-danger" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {% block contenido %} {% endblock %}
+        </div>
+      </div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+  </body>
+</html>

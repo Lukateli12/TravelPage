@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block titulo %} Viajes de Turismo {% endblock %}
+
+{% block contenido %} 
+
+<div class="p-5 mb-4 rounded-3 text-white text-center" style="background: linear-gradient(to right, #ac2200, #941e00);">
+  <div class="container text-center">
+      <i class="bi bi-globe2 display-1 text-primary"></i>
+      <h1 class="display-3 fw-bold">Explora Nuestros Destinos</h1>
+      <p class="col-md-8 fs-4 mx-auto">Descubre emocionantes viajes al Mercosur y Caribe. ¡Tu aventura comienza aquí!</p>
+      <hr class="my-4">
+      <p class="lead">
+          <a class="btn btn-primary btn-lg"style="background: linear-gradient(to right, #5000ac, #5000ac);" href="{% url 'Propuestas de viaje' %}" role="button">Ver Todos los Viajes</a>
+      </p>
+  </div>
+</div>
+
+<div class="container bg-light rounded p-4 shadow">
+  <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+          <div class="card h-100" style="border: 1px solid #992002;">
+              <div class="card-body text-center">
+                  <i class="bi bi-airplane" style="color: #992002;"></i>
+                  <h4 class="card-title mt-3">Viajes en Avión</h4>
+                  <p class="card-text">Descubre nuestros emocionantes viajes en avión a destinos increíbles.</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card h-100" style="border: 1px solid #992002;">
+              <div class="card-body text-center">
+                  <i class="bi bi-ship" style="color: #992002;"></i>
+                  <h4 class="card-title mt-3">Cruceros</h4>
+                  <p class="card-text">Embárcate en una aventura única con nuestros viajes en crucero por el Caribe.</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 mb-4">
+          <div class="card h-100" style="border: 1px solid #992002;">
+              <div class="card-body text-center">
+                  <i class="bi bi-bus" style="color: #992002;"></i>
+                  <h4 class="card-title mt-3">Viajes en Ómnibus</h4>
+                  <p class="card-text">Explora el Mercosur con comodidad en nuestros viajes en ómnibus.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}
